@@ -2,6 +2,12 @@
   "dependencies": {
     "secrets1": {
       "type": "secrets.user"
+    },
+    "identityapp1": {
+      "type": "identityapp",
+      "connectionId": "",
+      "suggestion": "true",
+      "ignored": "true"
     }
   }
 }
