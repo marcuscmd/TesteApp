@@ -1,0 +1,30 @@
+﻿@page "/tarefa"
+
+<h3>Tarefa Pendente(@todos.Count(tarefa => !tarefa.IsDone))</h3>
+
+<ul>
+    @foreach (var tarefa in todos)
+    {
+        <li>
+            <input type="checkbox" @bind="tarefa.IsDone"/>
+            <input @bind="tarefa.Titulo"/>
+        </li>
+    }
+</ul>
+
+<input placeholder="Adicionar Tarefas" @bind="novaTarefa" />
+<button @onclick="AddTarefa">Adicionar a Lista</button>
+
+@code {
+    private List<TodoItem> todos = new();
+    private string novaTarefa;
+
+    private void AddTarefa()
+    {
+        if (!string.IsNullOrWhiteSpace(novaTarefa))
+        {
+            todos.Add(new TodoItem { Titulo = novaTarefa });
+            novaTarefa = string.Empty;
+        }
+    }
+}
