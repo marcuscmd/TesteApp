@@ -1,4 +1,0 @@
-Bom dia.
-Tive alguns problemas na criação da API, não finalizei o projeto a tempo,
-mas vou deixar postado até onde fiz.
-A web está funcionando corretamente, tive problemas na API para criar o controlador
